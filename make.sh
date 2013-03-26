@@ -8,7 +8,7 @@
 
 ########## Variables
 
-dir=~/dotfiles # dotfiles directory
+dir=~/.dotfiles # dotfiles directory
 files="bashrc vimrc vim tmux.conf" # list of files/folders to symlink in homedir
 
 ##########
