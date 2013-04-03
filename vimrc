@@ -106,11 +106,6 @@ set listchars=tab:>-,eol:<
 highlight NonText ctermfg=black guifg=#4a4a59
 highlight SpecialKey ctermfg=black guifg=#4a4a59
 
-" Buffer Navigation
-nmap <C-e> :e#<CR>
-nmap <C-m> :bnext<CR>
-nmap <C-n> :bprev<CR>
-
 " Eclim Settings
 """"""""""""""""""""""""""""
 "use default Taglist instead of Eclim, avoid problem
