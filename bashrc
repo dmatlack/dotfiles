@@ -22,7 +22,7 @@ red="\[\033[31m\]"
 green="\[\033[32m\]"
 orange="\[\033[33m\]"
 blue="\[\033[34m\]"
-maroon="\[\033[35m\]"
+imaroon="\[\033[35m\]"
 cyan="\[\033[36m\]"
 grey="\[\033[37m\]"
 white="\[\033[38m\]"
@@ -35,6 +35,12 @@ else echo ${red} $ ${reset}; fi\`"
 
 alias ll='ls -la'
 alias sudo='sudo '
+
+function fooltmux () {
+  TEMP_TERM=$TERM
+  TEMP_TERM_SUFFIX=${TERM#$(echo $TERM | cut -f 1 -d'-')}
+  TERM="xterm${TEMP_TERM_SUFFIX}"
+}
 
 function psgrep() {
     ps u | head -1
