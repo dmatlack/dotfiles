@@ -30,7 +30,7 @@ white="\[\033[38m\]"
 function git_branch {
   branch=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
   if [ ! "${branch}" = "" ]; then
-    echo -e "\e[0;30m(\e[0;34m${branch}\e[0;30m)\e[1;37m "
+    echo -e "\x1B[0;30m(\x1B[0;34m${branch}\x1B[0;30m)\x1B[1;37m "
   else
     echo ""
   fi
