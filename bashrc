@@ -27,6 +27,15 @@ cyan="\[\033[36m\]"
 grey="\[\033[37m\]"
 white="\[\033[38m\]"
 
+function git_branch {
+  branch=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
+  if [ ! "${branch}" = "" ]; then
+    echo -e "\e[0;30m(\e[0;34m${branch}\e[0;30m)\e[1;37m "
+  else
+    echo ""
+  fi
+}
+
 export PS1="${cyan}\w${reset} 
 ${white}\u${reset}${bright}${black}@${reset}${white}\h${reset}\
 \`if [ \$? = 0 ]; \
@@ -43,8 +52,12 @@ function fooltmux () {
 }
 
 function psgrep() {
-    ps u | head -1
-    ps aux | grep "$1" | grep -v "grep"
+  ps u | head -1
+  ps aux | grep "$1" | grep -v "grep"
+}
+
+function psme() {
+  psgrep $USER
 }
 
 if [ -f ~/.bashrc_extra ]; then
