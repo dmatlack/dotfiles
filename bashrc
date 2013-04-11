@@ -28,19 +28,16 @@ grey="\[\033[37m\]"
 white="\[\033[38m\]"
 
 function git_branch {
-  branch=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
-  if [ ! "${branch}" = "" ]; then
-    echo -e "\x1B[0;30m(\x1B[0;34m${branch}\x1B[0;30m)\x1B[1;37m "
-  else
-    echo ""
-  fi
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
 }
-
 export PS1="${cyan}\w${reset} 
-${white}\u${reset}${bright}${black}@${reset}${white}\h${reset}\
+${white}\u${reset}${black}@${reset}${white}\h${reset} \
+\`b=\$(git_branch);\
+if [ ! \"\$b\" = \"\" ];\
+then echo \"${black}(${blue}\$b${black})${reset} \";fi\`\
 \`if [ \$? = 0 ]; \
-then echo ${bright}${green} $ ${reset}; \
-else echo ${red} $ ${reset}; fi\`"
+then echo ${green}$; \
+else echo ${red}$; fi\`${reset} "
 
 alias ll='ls -la'
 alias sudo='sudo '
