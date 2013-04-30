@@ -89,7 +89,6 @@ set cursorline
 "set cursorcolumn
 
 " Useful Commands and Shortcuts
-"""""""""""""""""""""""""""""""
 
 " sudo write file
 cmap w!! w !sudo tee % >/dev/null
@@ -106,16 +105,20 @@ set listchars=tab:>-,eol:<
 highlight NonText ctermfg=black guifg=#4a4a59
 highlight SpecialKey ctermfg=black guifg=#4a4a59
 
-" Eclim Settings
+" Powerline 
+""""""""""""""""""""""""""""
+let Powerline_colorscheme='gray'
+
+" Eclim
 """"""""""""""""""""""""""""
 "use default Taglist instead of Eclim, avoid problem
 "let g:EclimTaglistEnabled=0
 "let g:taglisttoo_disabled = 1 " maybe of the same use of the above command 
 
 "if the current file is in a Eclipse project, open project tree automatically
-let g:EclimProjectTreeAutoOpen=1 
-let g:EclimProjectTreeExpandPathOnOpen=1
-let g:EclimProjectTreeSharedInstance=1  "share tree instance through all tabs
+"let g:EclimProjectTreeAutoOpen=1 
+"let g:EclimProjectTreeExpandPathOnOpen=1
+"let g:EclimProjectTreeSharedInstance=1  "share tree instance through all tabs
 
 " use tabnew instead of split for new action
 "let g:EclimProjectTreeActions = [ {'pattern': '.*', 'name': 'Tab', 'action': 'tabnew'} ]
