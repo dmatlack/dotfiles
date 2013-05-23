@@ -1,15 +1,14 @@
 #!/bin/bash
 
-#!/bin/bash
-############################
-# .make.sh
-# This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
-############################
-
-########## Variables
-
 dir=~/.dotfiles # dotfiles directory
-files="bashrc vimrc vim tmux.conf" # list of files/folders to symlink in homedir
+
+# These files should be added for all my computers
+files="bashrc vimrc vim tmux.conf"
+
+# Files specific to crunchbang install
+if [ `hostname` = crunchbang ]; then
+  files="$files conkyrc"
+fi
 
 ##########
 
