@@ -27,8 +27,8 @@ endif
 set splitright
 set splitbelow
 
-" Status Line
-set laststatus=2
+" Set to 2 to enable powerline
+" set laststatus=2
 
 " Arrow keys only work in Insert mode 
 noremap  <up>    <nop>
