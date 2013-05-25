@@ -1,0 +1,57 @@
+! Basic Term appearence
+URxvt.borderColor:  #080808
+*boldMode: false
+*scrollBar: false
+*internalBorder: 1
+URxvt*termName: rxvt-256color
+urxvt.xftAntialias: false
+urxvt*cursorUnderline:  false
+
+!!!! Colors
+
+!*background: #0D131A
+!*foreground: #8A9499
+!*color0:     #0D131A
+!*color8:     #44484C
+!*color1:     #802635
+!*color9:     #B3354C
+!*color2:     #608040
+!*color10:    #4BA65A
+!*color3:     #877C43
+!*color11:    #BF9F5F
+!*color4:     #1C678C
+!*color12:    #3995BF
+!*color5:     #684D80
+!*color13:    #A64286
+!*color6:     #337373
+!*color14:    #6AAAB3
+!*color7:     #738080
+!*color15:    #B3B3B3
+
+*background: #080808
+*foreground: #808080
+*color0:  #1a1a1a
+*color8:  #404040
+*color1:  #d75f5f
+*color9:  #EA8484
+*color2:  #87af5f
+*color10: #C7F09F
+*color3:  #ffaf5f
+*color11: #FFCC9A
+*color4:  #87afd7
+*color12: #a5caef
+*color5:  #8787af
+*color13: #A6A6DE
+*color6:  #5f8787
+*color14: #69b2b2
+*color7:  #808080
+*color15: #d7d7d7
+
+*font: xft:Inconsolata:pixelsize=13:antialias=true:hinting=true
+*boldFont: xft:Inconsolata:pixelsize=13:antialias=true:hinting=true
+URxvt.letterSpace:-1 
+
+URxvt.colorUL: #ffaf5f
+URxvt.perl-ext-common:  default,matcher
+URxvt.url-launcher:      /usr/bin/chromium
+URxvt.matcher.button:   1
