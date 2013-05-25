@@ -7,7 +7,7 @@ files="bashrc vimrc vim tmux.conf"
 
 # Files specific to crunchbang install
 if [ `hostname` = crunchbang ]; then
-  files="$files conkyrc"
+  files="$files conkyrc Xdefaults"
 fi
 
 ##########

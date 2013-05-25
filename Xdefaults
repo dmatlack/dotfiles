@@ -1,8 +1,7 @@
 ! Basic Term appearence
-URxvt.borderColor:  #080808
-*boldMode: false
+URxvt.borderColor:  #87afd7
+*externalBorder: 1
 *scrollBar: false
-*internalBorder: 1
 URxvt*termName: rxvt-256color
 urxvt.xftAntialias: false
 urxvt*cursorUnderline:  false
@@ -55,3 +54,7 @@ URxvt.colorUL: #ffaf5f
 URxvt.perl-ext-common:  default,matcher
 URxvt.url-launcher:      /usr/bin/chromium
 URxvt.matcher.button:   1
+
+!URxvt.keysym,Shift-Control-V: perl:clipboard:paste
+!URxvt.iso14755: False
+!URxvt.perl-ext-common: default,clipboard
