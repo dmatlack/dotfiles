@@ -48,7 +48,7 @@ alignment top_middle
 
 # Gap between borders of screen and text
 gap_x 0
-gap_y 2
+gap_y 6
 
 # stuff after 'TEXT' will be formatted on screen
 

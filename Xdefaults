@@ -1,12 +1,7 @@
 ! Basic Term appearence
-!removl Lock = Caps_Lock
-!remove Control = Control_L
-!keysym Control_L = Caps_Lock
-!keysym Caps_Lock = Control_L
-!add Lock = Caps_Lock
-!add Control = Control_L
 URxvt.borderColor:  #87afd7
 *externalBorder: 1
+*internalBorder: 2
 *scrollBar: false
 URxvt*termName: rxvt-256color
 urxvt.xftAntialias: false
