@@ -51,8 +51,8 @@ function fooltmux () {
 
 function psgrep() {
   ps u | head -1
-  grep_cmd="grep $1"
-  ps aux | $grep_cmd | grep -v $grep_cmd
+  grep_cmd="grep -i $1"
+  ps aux | $grep_cmd | grep -v "$grep_cmd"
 }
 
 function psme() {
