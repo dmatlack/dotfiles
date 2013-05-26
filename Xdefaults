@@ -31,7 +31,7 @@ urxvt*cursorUnderline: false
 
 !! courtesy github.com/Unixhub/dotfiles
 *background: #080808
-*foreground: #909090
+*foreground: #b0b0b0
 *color0:     #1a1a1a
 *color8:     #404040
 *color1:     #d75f5f
