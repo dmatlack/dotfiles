@@ -42,6 +42,7 @@ else printf \"${red}$\"; fi\`${reset} "
 
 alias ll='ls -la'
 alias sudo='sudo '
+alias watch='watch '
 
 function fooltmux () {
   TEMP_TERM=$TERM
