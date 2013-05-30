@@ -3,7 +3,7 @@
 dir="$HOME/.dotfiles"
 
 # These files should be added for all my computers
-files="bashrc vimrc vim tmux.conf irssi"
+files="bashrc vimrc vim tmux.conf irssi gitconfig"
 
 # Files specific to crunchbang install
 if [ `hostname` = crunchbang ]; then

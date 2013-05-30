@@ -1,0 +1,20 @@
+[user]
+  name = David Matlack
+  email = matlackdavid@gmail.com
+[core]
+  excludesfile = /home/david/.gitignore
+  editor = vim
+[merge]
+  tool = vimdiff
+[color]
+  ui = auto
+[alias]
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  lg1 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
+  lg2 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(bold white)— %an%C(reset)' --abbrev-commit
+  lg = !"git lg1"
+  st = status
+  br = branch
+  co = checkout
+  cm = commit
