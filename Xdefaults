@@ -1,13 +1,13 @@
 ! Basic Term appearence
-URxvt.borderColor:  #87afd7
-*externalBorder: 1
-*internalBorder: 2
+URxvt.borderColor:  #1a1a1a
+*internalBorder: 3
 *scrollBar: false
 URxvt*termName: rxvt-256color
 urxvt.xftAntialias: false
 urxvt*cursorUnderline: false
 
 !!!! begin COLORS
+! 0=black, 1=red, 2=green, 3=yellow, 4=blue, 5=magenta, 6=cyan, 7=white
 
 !! courtesy github.com/Unixhub/dotfiles
 !*background: #0D131A
