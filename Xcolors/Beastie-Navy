@@ -1,0 +1,25 @@
+!! courtesy github.com/Unixhub/dotfiles
+*background: #0D131A
+*foreground: #aec8d4
+*color0:     #0D131A
+*color8:     #44484C
+*color1:     #802635
+*color9:     #B3354C
+*color2:     #608040
+*color10:    #4BA65A
+*color3:     #877C43
+*color11:    #BF9F5F
+*color4:     #1C678C
+*color12:    #3995BF
+*color5:     #684D80
+*color13:    #A64286
+*color6:     #337373
+*color14:    #6AAAB3
+*color7:     #738080
+*color15:    #B3B3B3
+!TODO
+!*cursorColor: ?
+!*colorIT:     ?
+!*colorUL:     ?
+!*colorBD:     ?
+!URxvt.borderColor: ?
