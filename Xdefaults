@@ -20,29 +20,9 @@ urxvt*cursorUnderline: false
 ! 0=black, 1=red, 2=green, 3=yellow, 4=blue, 5=magenta, 6=cyan, 7=white
 
 !! courtesy github.com/Unixhub/dotfiles
-*background: #080808
-*foreground: #b0b0b0
-*color0:     #1a1a1a
-*color8:     #404040
-*color1:     #d75f5f
-*color9:     #EA8484
-*color2:     #87af5f
-*color10:    #C7F09F
-*color3:     #ffaf5f
-*color11:    #FFCC9A
-*color4:     #87afd7
-*color12:    #a5caef
-*color5:     #8787af
-*color13:    #A6A6DE
-*color6:     #5f8787
-*color14:    #69b2b2
-*color7:     #808080
-*color15:    #d7d7d7
-*cursorColor: #a5caef
-!*colorIT:     ?
-!*colorUL:     ?
-!*colorBD:     ?
-URxvt.borderColor:  #080808
+!hund, jessicamouse, rasi, readable, technicolor-variant, technobass
+!
+#include ".dotfiles/Xcolors/readable"
 
 *font: xft:Inconsolata:pixelsize=13:antialias=true:hinting=true
 *boldFont: xft:Inconsolata:pixelsize=13:antialias=true:hinting=true
