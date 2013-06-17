@@ -22,7 +22,7 @@ red="\[\033[31m\]"
 green="\[\033[32m\]"
 orange="\[\033[33m\]"
 blue="\[\033[34m\]"
-imaroon="\[\033[35m\]"
+maroon="\[\033[35m\]"
 cyan="\[\033[36m\]"
 grey="\[\033[37m\]"
 white="\[\033[38m\]"
@@ -35,7 +35,7 @@ export PS1="${cyan}\w${reset}
 ${white}\u${reset}${black}@${reset}${white}\h${reset} \
 \`r=\$?; b=\$(git_branch);\
 if [ ! \"\$b\" = \"\" ];\
-then printf \"${black}(${blue}\$b${black})${reset} \"; fi; \
+then printf \"${black}(${blue}\$b${reset}${black})${reset} \"; fi; \
 if [ \$r = 0 ]; \
 then printf \"${green}$\"; \
 else printf \"${red}$\"; fi\`${reset} "
