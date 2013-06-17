@@ -32,10 +32,10 @@ function git_branch {
 }
 
 export PS1="${cyan}\w${reset} 
-${white}\u${reset}${black}@${reset}${white}\h${reset} \
+${white}\u${reset}${bright}${black}@${reset}${white}\h${reset} \
 \`r=\$?; b=\$(git_branch);\
 if [ ! \"\$b\" = \"\" ];\
-then printf \"${black}(${blue}\$b${reset}${black})${reset} \"; fi; \
+then printf \"${bright}${black}(${bright}${blue}\$b${reset}${bright}${black})${reset} \"; fi; \
 if [ \$r = 0 ]; \
 then printf \"${green}$\"; \
 else printf \"${red}$\"; fi\`${reset} "
