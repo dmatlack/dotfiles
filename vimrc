@@ -59,7 +59,7 @@ au BufNewFile,BufRead *.pml  setf promela   " Promela (Protocol Meta Language)
 au BufNewFile,BufRead *.ispc setf ispc
 
 "" Whitespace
-set tabstop=2 shiftwidth=2      " tab length
+set tabstop=4 shiftwidth=4      " tab length
 set expandtab                   " use spaces, not tabs
 set backspace=indent,eol,start  " backspace through everything in insert mode
 
