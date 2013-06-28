@@ -1,0 +1,32 @@
+# xbindkeys configuration
+
+# Screen Backlight Brightness
+"sudo nvidiablctl down"
+    m:0x0 + c:232
+    XF86MonBrightnessDown
+
+"sudo nvidiablctl up"
+    m:0x0 + c:233
+    XF86MonBrightnessUp
+
+# Keyboard Backlight brightness
+"sudo keyboardblctl down"
+    m:0x0 + c:237
+    XF86KbdBrightnessDown
+
+"sudo keyboardblctl up"
+    m:0x0 + c:238
+    XF86KbdBrightnessUp
+
+# Volume Control
+"amixer -q sset Master 5%-"
+    m:0x0 + c:122
+    XF86AudioLowerVolume
+
+"amixer -q sset Master 5%+"
+    m:0x0 + c:123
+    XF86AudioRaiseVolume
+
+"amixer -q sset Master toggle"
+    m:0x0 + c:121
+    XF86AudioMute

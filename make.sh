@@ -7,7 +7,7 @@ files="bashrc vimrc vim tmux.conf irssi gitconfig"
 
 # Files specific to crunchbang install
 if [ `hostname` = crunchbang ]; then
-  files="$files conkyrc Xdefaults Xmodmap"
+  files="$files conkyrc Xdefaults Xmodmap xbindkeysrc"
 fi
 
 ##########
