@@ -258,9 +258,9 @@ statusbar = {
 };
 settings = {
   core = {
-    real_name = "D M";
-    user_name = "dyuk";
-    nick = "dyuk";
+    real_name = "DM";
+    user_name = "datlack";
+    nick = "datlack";
   };
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = { theme = "theirssithing"; };
