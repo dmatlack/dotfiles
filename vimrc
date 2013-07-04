@@ -80,6 +80,8 @@ set cursorline
 " Folding
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview
+highlight Folded ctermfg=green ctermbg=236
+
 
 
 " Random shit
