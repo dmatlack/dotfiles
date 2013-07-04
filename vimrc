@@ -28,7 +28,7 @@ set splitright
 set splitbelow
 
 " Set to 2 to enable powerline
-" set laststatus=2
+"set laststatus=2
 
 " Arrow keys only work in Insert mode 
 noremap  <up>    <nop>
@@ -50,7 +50,7 @@ noremap k gk
 noremap  <C-f> <PageDown>
 inoremap <C-f> <PageDown>
 noremap  <C-b> <PageUp>
-inoremap <C-b> <PageDown>
+inoremap <C-b> <PageUp>
 set nostartofline
 
 "" New Sytnax Highlighting
@@ -71,6 +71,17 @@ set ignorecase                    " searches are case insensitive...
 set smartcase                     " ... unless they contain a capital letter
 set scrolloff=5                   " Search results have a 5 line context
 
+" Cursor Lines
+hi CursorLine   cterm=NONE ctermbg=black 
+hi CursorColumn cterm=NONE ctermbg=black
+set cursorline
+"set cursorcolumn
+
+" Folding
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
+
+
 " Random shit
 set mouse=               " No mouse
 set ruler                " show cursor line,column
@@ -82,11 +93,7 @@ set title                " change the terminal's title
 set visualbell           " don't beep
 set noerrorbells         " don't beep
 
-" Cursor Lines
-hi CursorLine   cterm=NONE ctermbg=black 
-hi CursorColumn cterm=NONE ctermbg=black
-set cursorline
-"set cursorcolumn
+
 
 " Useful Commands and Shortcuts
 
