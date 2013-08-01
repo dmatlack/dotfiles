@@ -54,9 +54,9 @@ inoremap <C-b> <PageUp>
 set nostartofline
 
 "" New Sytnax Highlighting
-au BufNewFile,BufRead *.glsl setf glsl      " OpenGL Shader Language
-au BufNewFile,BufRead *.pml  setf promela   " Promela (Protocol Meta Language)
-au BufNewFile,BufRead *.ispc setf ispc
+au BufNewFile,BufRead *.glsl    setf glsl      " OpenGL Shader Language
+au BufNewFile,BufRead *.pml     setf promela   " Promela (Protocol Meta Language)
+au BufNewFile,BufRead *.ispc    setf ispc      " ISPC
 
 "" Whitespace
 set tabstop=4 shiftwidth=4      " tab length
