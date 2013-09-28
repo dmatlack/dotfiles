@@ -4,6 +4,8 @@
 
 export EDITOR=vim
 
+export BXSHARE="/usr/local/share/bochs/"
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -31,8 +33,8 @@ function git_branch {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
 }
 
-export PS1="${cyan}\w${reset} 
-${white}\u${reset}${bright}${black}@${reset}${white}\h${reset} \
+#${white}\u${reset}${bright}${black}@${reset}${white}\h${reset} \
+export PS1="${reset}${cyan}\w${reset} 
 \`r=\$?; b=\$(git_branch);\
 if [ ! \"\$b\" = \"\" ];\
 then printf \"${bright}${black}(${bright}${blue}\$b${reset}${bright}${black})${reset} \"; fi; \
@@ -43,6 +45,7 @@ else printf \"${red}$\"; fi\`${reset} "
 alias ll='ls -la'
 alias sudo='sudo '
 alias watch='watch '
+alias grep='grep --color=auto '
 
 function fooltmux () {
   TEMP_TERM=$TERM
