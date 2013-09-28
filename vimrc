@@ -53,13 +53,20 @@ noremap  <C-b> <PageUp>
 inoremap <C-b> <PageUp>
 set nostartofline
 
+" Folding
+"autocmd BufWinLeave *.* mkview
+"autocmd BufWinEnter *.* silent loadview
+"highlight Folded ctermfg=green ctermbg=236
+"set foldmethod=marker
+
+
 "" New Sytnax Highlighting
 au BufNewFile,BufRead *.glsl    setf glsl      " OpenGL Shader Language
 au BufNewFile,BufRead *.pml     setf promela   " Promela (Protocol Meta Language)
 au BufNewFile,BufRead *.ispc    setf ispc      " ISPC
 
 "" Whitespace
-set tabstop=4 shiftwidth=4      " tab length
+set tabstop=2 shiftwidth=2      " tab length
 set expandtab                   " use spaces, not tabs
 set backspace=indent,eol,start  " backspace through everything in insert mode
 
@@ -76,12 +83,6 @@ hi CursorLine   cterm=NONE ctermbg=black
 hi CursorColumn cterm=NONE ctermbg=black
 set cursorline
 "set cursorcolumn
-
-" Folding
-autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview
-highlight Folded ctermfg=green ctermbg=236
-
 
 
 " Random shit
