@@ -115,9 +115,13 @@ set listchars=tab:>-,eol:<
 highlight NonText ctermfg=black guifg=#4a4a59
 highlight SpecialKey ctermfg=black guifg=#4a4a59
 
+highlight TODO  ctermfg=darkred ctermbg=black
+highlight FIXME ctermfg=darkred ctermbg=black
+highlight XXX   ctermfg=darkred ctermbg=black
+
 " Powerline 
 """"""""""""""""""""""""""""
-let Powerline_colorscheme='gray'
+"let Powerline_colorscheme='gray'
 
 " Eclim
 """"""""""""""""""""""""""""
