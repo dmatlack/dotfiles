@@ -1,3 +1,19 @@
+settings = {
+  core = { 
+    real_name = "datlack";
+    user_name = "datlack";
+    nick = "datlack";
+  };
+  "fe-text" = { actlist_sort = "refnum"; };
+  "fe-common/core" = { theme = "lumolk"; };
+  "perl/core/scripts" = {
+    awl_display_key = "$H %K$C $S";
+    awl_display_key_active = "$H %n$C $S";
+    awl_placement = "top";
+    awl_separator = "\\ \\ \\ ";
+  };
+};
+
 servers = (
   { address = "eu.irc6.net"; chatnet = "IRCnet"; port = "6667"; },
   { address = "open.ircnet.net"; chatnet = "IRCnet"; port = "6667"; },
@@ -153,8 +169,8 @@ statusbar = {
 
   items = {
     # start/end text in statusbars
-    barstart = "{sbstart}";
-    barend = "{sbend}";
+    barstart = "";
+    barend = "";
 
     topicbarstart = "{topicsbstart}";
     topicbarend = "{topicsbend}";
@@ -185,7 +201,7 @@ statusbar = {
     # the "default statusbar" to be displayed at the bottom of the window.
     # contains all the normal items.
     window = {
-      disabled = "no";
+      disabled = "yes";
 
       # window, root
       type = "window";
@@ -246,22 +262,26 @@ statusbar = {
       type = "root";
       placement = "top";
       position = "1";
-      visible = "always";
+      visible = "inactive";
       items = {
         topicbarstart = { priority = "100"; };
         topic = { };
         topic_empty = { };
         topicbarend = { priority = "100"; alignment = "right"; };
       };
+      disabled = "yes";
+    };
+    new1 = { placement = "top"; items = { }; position = "100"; };
+    new2 = { placement = "bottom"; };
+    awl_0 = {
+      placement = "top";
+      items = {
+        barstart = { priority = "100"; };
+        awl_0 = { };
+        barend = { priority = "100"; alignment = "right"; };
+      };
     };
   };
 };
-settings = {
-  core = {
-    real_name = "DM";
-    user_name = "datlack";
-    nick = "datlack";
-  };
-  "fe-text" = { actlist_sort = "refnum"; };
-  "fe-common/core" = { theme = "theirssithing"; };
-};
+
+
