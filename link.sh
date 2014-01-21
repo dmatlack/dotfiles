@@ -2,7 +2,7 @@
 
 set -e
 
-dir="$HOME/.dotfiles"
+dir="$HOME/dotfiles"
 
 # These files should be added for all my computers
 files="bashrc vimrc vim tmux.conf irssi gitconfig 
@@ -16,7 +16,7 @@ files="bashrc vimrc vim tmux.conf irssi gitconfig
   echo "done"
   
   for file in $files; do
-    rm ~/.$file
+    rm -f ~/.$file
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
   done

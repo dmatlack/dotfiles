@@ -42,6 +42,7 @@ if [ \$r = 0 ]; \
 then printf \"${green}$\"; \
 else printf \"${red}$\"; fi\`${reset} "
 
+alias ls='ls --color=auto '
 alias ll='ls -la'
 alias sudo='sudo '
 alias watch='watch '
@@ -67,3 +68,4 @@ if [ -f ~/.bashrc_extra ]; then
     source ~/.bashrc_extra
 fi
 
+alias q='qemu-system-i386 -m 1024 OS.iso -serial stdio'

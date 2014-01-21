@@ -64,6 +64,7 @@ set nostartofline
 au BufNewFile,BufRead *.glsl    setf glsl      " OpenGL Shader Language
 au BufNewFile,BufRead *.pml     setf promela   " Promela (Protocol Meta Language)
 au BufNewFile,BufRead *.ispc    setf ispc      " ISPC
+au BufNewFile,BufRead *.S       setf asm
 
 "" Whitespace
 set tabstop=2 shiftwidth=2      " tab length
@@ -86,7 +87,7 @@ set cursorline
 
 
 " Random shit
-set mouse=               " No mouse
+set mouse=a              " Yes mouse
 set ruler                " show cursor line,column
 set number               " show line number
 set history=1000         " remember more commands and search history
@@ -118,6 +119,10 @@ highlight SpecialKey ctermfg=black guifg=#4a4a59
 highlight TODO  ctermfg=darkred ctermbg=black
 highlight FIXME ctermfg=darkred ctermbg=black
 highlight XXX   ctermfg=darkred ctermbg=black
+
+" NERDTree
+""""""""""""""""""""""""""""
+let NERDTreeIgnore=['\.o$']
 
 " Powerline 
 """"""""""""""""""""""""""""

@@ -144,3 +144,10 @@ bindsym $mod+minus move scratchpad
 # # Show the first scratchpad window
 bindsym $mod+Shift+minus scratchpad show
 
+for_window [class="Bochs"] floating enable
+for_window [class="Steam"] floating enable
+for_window [class="qemu*"] floating enable
+
+exec xmodmap ~/.Xmodmap
+
+exec --no-startup-id sh ~/.fehbg
