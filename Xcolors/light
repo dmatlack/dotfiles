@@ -1,5 +1,5 @@
-URxvt.background:#D6D6D6
-URxvt.foreground:#292929
+*background:#151515
+*foreground:#aeaeae
 
 !black
 *color0:#333333
