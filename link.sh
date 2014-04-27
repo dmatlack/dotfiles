@@ -6,7 +6,7 @@ dir="$HOME/dotfiles"
 
 # These files should be added for all my computers
 files="bashrc vimrc vim tmux.conf irssi gitconfig 
-       Xdefaults Xmodmap xbindkeysrc i3"
+       Xdefaults Xmodmap xbindkeysrc i3 mutt"
 
 ##########
 

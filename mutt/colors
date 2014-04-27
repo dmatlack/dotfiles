@@ -1,0 +1,73 @@
+#vim: filetype=muttrc
+
+#
+#
+# Colors for Mutt
+#   file:///usr/share/doc/mutt/configuration.html#color
+#
+# white black green magenta blue cyan yellow red default colorx
+#
+# colorx chart: http://upload.wikimedia.org/wikipedia/en/1/15/Xterm_256color_chart.svg
+#
+#
+
+color normal      color245      default   # is this a catch-all?
+color error       color124      default   # error messages printed by mutt
+color tilde       color245      default   # the ~ used to pad blank lines in the pager
+color message     yellow        default   # informational messages
+color markers     yellow        default   # the + used to mark wrapped lines
+color attachment  color235      default   # attachments in the body of emails
+color search      color48       color240  # how to hilite search patterns in the pager
+color status      color39       default   # mode lines used to display info about mailbox or message
+color indicator   default       color237  # arrow or bar used to indicate the current item in a menu
+
+# Index
+color tree        color124      default                              # arrow in threads
+color index       color184      default  "~N~p"                      # message to myself (new)
+color index       color130      default  "~p"                        # message to myself
+color index       color137      default  "~Q"                        # messages replied to
+color index       color70       default  "~P"                        # message from myself
+color index       color220      default  ~N                          # new
+color index       color208      default  ~U                          # unread
+color index       color142      default  ~O                          # old
+color index       color91       default  ~T                          # tagged
+color index       color238      default  "~D(!~p|~p)"                # deleted
+color index       color196      default  ~F                          # flagged
+color index       color250      default  "~A!~N!~T!~p!~Q!~F!~D!~P"   # the rest
+color index       color220      default  "~A~N!~T!~p!~Q!~F!~D"       # the rest
+color index       color232      default  ~=                          # duplicate messages
+
+
+color header       color245     color232  "^From"
+color header       color245     color232  "^Date"
+color header       color245     color232  "^(Subject)"
+color header       color245     color232  "^(To|Reply-To|Cc|Bcc):"
+color header       color245     color232  "^(X-Original-To):"
+color header       color245     color232  "^(User-Agent|X-Editor|X-Mailer):"
+color header       color245     color232  "^Organization:"
+
+# Body
+color quoted      color24       default
+color quoted1     color28       default
+color quoted2     color94       default
+color quoted3     color88       default
+color signature   color238      default
+color bold        green         default
+color underline   color208      default
+color normal      color250      default
+color body        color39       default  "(finger|ftp|http|news|telnet)://[^ >]*"
+color body        color39       default  "<URL:[^ ]*>"
+color body        cyan          default  "www\\.[-.a-z0-9]+\\.[a-z][a-z][a-z]?([-_./~a-z0-9]+)?"
+color body        green         default  "[[:alnum:]][-+.#_[:alnum:]]*@[-+.[:alnum:]]*[[:alnum:]]"
+color body        brightred     default  "mailto: *[^ ]+\(\\?subject=[^ ]+\)?"
+color body        color178      default  "[;:][-o][)/(|]"
+color body        color178      default  "[;:][)(|]"
+color body        color178      default  "[*]?((N)?ACK|CU|LOL|SCNR|BRB|BTW|CWYL|FWIW|vbg|GD&R|HTH|HTHBE|IMHO|IMNSHO|IRL|RTFM|ROTFL|ROFL|YMMV)[*]?"
+#color body        color178      default  "[ ][*][^*]*[*][ ]?"
+#color body        color178      default  "[ ]?[*][^*]*[*][ ]"
+color body        brightred     default  "(BAD signature)"
+color body        green         default  "(Good signature)"
+
+color hdrdefault  color238  color233
+color body        color128  color233  '[-.+\w]+@[-.\w]+[^.]' # e-mail addresses
+color underline   brightgreen color233

@@ -1,0 +1,101 @@
+#
+# IMAP
+#
+set imap_user = "matlackdavid@gmail.com"
+set imap_pass = `pwsafe --quiet --echo --password mutt`
+set folder    = imaps://matlackdavid@imap.gmail.com/
+#
+# SMTP
+#
+set smtp_url      = smtp://matlackdavid@smtp.gmail.com:587/
+set smtp_pass     = $imap_pass
+set from          = "matlackdavid@gmail.com"
+set realname      = "David Matlack"
+
+set editor        = "vim -c 'set syntax=mail ft=mail enc=utf-8'"
+set send_charset  = "us-ascii:utf-8"
+
+# just scroll one line instead of full page
+set menu_scroll=yes
+
+#
+# Reference: http://jaysonrowe.blogspot.com/2012/05/configuring-mutt-for-use-with-gmail-via.html
+#
+set spoolfile             = "+INBOX"
+set imap_check_subscribed = yes
+set hostname              = gmail.com
+set mail_check            = 120
+set timeout               = 300
+set imap_keepalive        = 300
+set postponed             = "+[GMail]/Drafts"
+set header_cache          = ~/.mutt/cache/headers
+set message_cachedir      = ~/.mutt/cache/bodies
+set certificate_file      = ~/.mutt/certificates
+set move                  = no
+set include
+set sort                  = 'threads'
+set sort_aux              = 'reverse-last-date-received'
+set auto_tag              = yes
+set pager_index_lines     = 15
+
+ignore "Authentication-Results:"
+ignore "DomainKey-Signature:"
+ignore "DKIM-Signature:"
+
+hdr_order         Date From To Cc
+alternative_order text/plain text/html *
+auto_view         text/plain
+
+bind editor <Tab>   complete-query
+bind editor ^T      complete
+bind editor <space> noop
+
+#
+# http://stevelosh.com/blog/2012/10/the-homely-mutt/
+#
+ignore              *                             # ignore all headers
+unhdr_order         *                             # some distros order things by default
+unignore            from: to: cc: date: subject:  # show only these
+hdr_order           from: to: cc: date: subject:  # and in this order
+set date_format     = "%m/%d"
+#set index_format    = "[%Z]  %D  %-20.20F  %s"
+set index_format="%4C %Z %[!%b %d %Y] %-17.17F (%3l) %s"
+set sort            = threads                     # like gmail
+set sort_aux = reverse-last-date-received         # like gmail
+set uncollapse_jump                               # don't collapse on an unread message
+set sort_re                                       # thread based on regex
+set reply_regexp    = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
+set status_chars    = " *%A"
+set status_format   = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+
+#
+# Gmail-style keyboard shortcuts
+#
+#macro index,pager am   "<enter-command>unset trash\n <delete-message>"                                           "Gmail archive message"
+#macro index,pager d    "<enter-command>set trash=\"imaps://imap.googlemail.com/[GMail]/Bin\"\n <delete-message>" "Gmail delete message"
+macro index,pager gi   "<change-folder>=INBOX<enter>"                                                            "Go to inbox"
+macro index,pager ga   "<change-folder>=[Gmail]/All Mail<enter>"                                                 "Go to all mail"
+#macro index,pager gs   "<change-folder>=[Gmail]/Starred<enter>"                                                  "Go to starred messages"
+#macro index,pager gd   "<change-folder>=[Gmail]/Drafts<enter>"                                                   "Go to drafts"
+macro index,pager gl   "<change-folder>?"                                                                        "Go to 'Label'"
+
+#
+# Sidebar patch
+#
+set sidebar_width     = 40
+set sidebar_visible   = yes
+set sidebar_delim     = ' | '
+set sidebar_sort      = "yes"
+color sidebar_new yellow default
+bind index,pager \CP sidebar-prev
+bind index,pager \CN sidebar-next
+bind index,pager \CO sidebar-open
+mailboxes =INBOX
+
+#
+# Keyboard shortcuts
+#
+bind pager \CJ next-line      # ctrl+j to scroll down in an email
+bind pager \CK previous-line  # ctrl+k to scroll up in an email
+
+source ~/.mutt/colors
