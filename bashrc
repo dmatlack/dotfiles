@@ -39,14 +39,16 @@ export PS1="${reset}${cyan}\w${reset}
 if [ ! \"\$b\" = \"\" ];\
 then printf \"${bright}${black}(${bright}${blue}\$b${reset}${bright}${black})${reset} \"; fi; \
 if [ \$r = 0 ]; \
-then printf \"${green}$\"; \
-else printf \"${red}$\"; fi\`${reset} "
+then printf \"${green}\$r\"; \
+else printf \"${red}\$r\"; fi\`${bright}${black}>${reset} "
 
 alias ls='ls --color=auto '
 alias ll='ls -la'
 alias sudo='sudo '
 alias watch='watch '
 alias grep='grep --color=auto '
+
+alias sendpatches='git send-email --smtp-pass=`pwsafe --echo --quiet -p git-send-email`'
 
 function fooltmux () {
   TEMP_TERM=$TERM
@@ -69,3 +71,7 @@ if [ -f ~/.bashrc_extra ]; then
 fi
 
 alias q='qemu-system-i386 -m 1024 OS.iso -serial stdio'
+alias b='bochs -q'
+
+alias inslicoss='sudo insmod /home/david/prog/linux/drivers/staging/slicoss/slicoss.ko'
+alias rmslicoss='sudo rmmod /home/david/prog/linux/drivers/staging/slicoss/slicoss.ko'
