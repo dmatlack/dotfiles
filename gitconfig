@@ -18,3 +18,10 @@
   br = branch
   co = checkout
   cm = commit
+[diff]
+	renamelimit = 4621
+[sendemail]
+  smtpencryption = tls
+  smtpserver = smtp.gmail.com
+  smtpuser = matlackdavid@gmail.com
+  smtpserverport = 587
