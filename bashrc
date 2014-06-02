@@ -5,6 +5,7 @@
 export EDITOR=vim
 
 export BXSHARE="/usr/local/share/bochs/"
+export WWW_HOME="www.google.com"
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -33,8 +34,9 @@ function git_branch {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
 }
 
-#${white}\u${reset}${bright}${black}@${reset}${white}\h${reset} \
-export PS1="${reset}${cyan}\w${reset} 
+export PS1="\
+${white}\u${reset}${bright}${black}@${reset}${white}\h${reset}:\
+${reset}${cyan}\w${reset}
 \`r=\$?; b=\$(git_branch);\
 if [ ! \"\$b\" = \"\" ];\
 then printf \"${bright}${black}(${bright}${blue}\$b${reset}${bright}${black})${reset} \"; fi; \
