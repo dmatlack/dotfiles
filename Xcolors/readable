@@ -1,5 +1,5 @@
 ! "black"
-*color0:  #202020
+*color0:  #2e2e2e
 *color8:  #5a5a5a
 ! red
 *color1:  #C70031
@@ -23,6 +23,5 @@
 *color7:  #E2D1E3
 *color15: #FFFFFF
  
-*background: #151515
+*background: #050505
 *foreground: #aeaeae
-

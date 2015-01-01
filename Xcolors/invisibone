@@ -3,8 +3,8 @@
 !
 ! vim: set ft=xdefaults:
 
-URxvt.background: #232323
-URxvt.foreground: #A0A0A0
+*.background: #232323
+*.foreground: #A0A0A0
 
 URxvt.colorBD:    #CFCFCF
 URxvt.colorUL:    #A0A0A0

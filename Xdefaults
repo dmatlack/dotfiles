@@ -7,8 +7,10 @@
 *borderLess: false
 *scrollBar: false
 URxvt*termName: rxvt-256color
-urxvt.xftAntialias: true
+!urxvt.xftAntialias: true
+urxvt*cursorBlink: true
 urxvt*cursorUnderline: false
+urxvt*cursorColor: #FFAF00
 
 ! Color
 #include "dotfiles/Xcolors/readable"

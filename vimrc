@@ -28,7 +28,7 @@ set splitright
 set splitbelow
 
 " Set to 2 to enable powerline
-"set laststatus=2
+set laststatus=2
 
 " Arrow keys only work in Insert mode 
 noremap  <up>    <nop>
@@ -67,8 +67,8 @@ au BufNewFile,BufRead *.ispc    setf ispc      " ISPC
 au BufNewFile,BufRead *.S       setf asm
 
 "" Whitespace
-set tabstop=2 shiftwidth=2      " tab length
-set expandtab                   " use spaces, not tabs
+set tabstop=8 shiftwidth=8      " tab length
+set noexpandtab                 " expandtab == spaces
 set backspace=indent,eol,start  " backspace through everything in insert mode
 
 "" Searching
@@ -80,11 +80,13 @@ set smartcase                     " ... unless they contain a capital letter
 set scrolloff=5                   " Search results have a 5 line context
 
 " Cursor Lines
-hi CursorLine   cterm=NONE ctermbg=black 
+hi CursorLine   cterm=NONE ctermbg=black
 hi CursorColumn cterm=NONE ctermbg=black
-set cursorline
+"set cursorline
 "set cursorcolumn
 
+" Folding
+highlight Folded ctermfg=green ctermbg=236
 
 " Random shit
 set mouse=a              " Yes mouse
@@ -112,7 +114,7 @@ nmap <leader>l :set list!<CR>   " show tabs and eol
 nmap <leader>e :NERDTreeToggle<CR>
 
 " Invisible characters
-set listchars=tab:>-,eol:<
+set listchars=tab:>-,eol:$
 highlight NonText ctermfg=black guifg=#4a4a59
 highlight SpecialKey ctermfg=black guifg=#4a4a59
 
